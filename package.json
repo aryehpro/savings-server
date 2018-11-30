@@ -2,8 +2,9 @@
   "name": "savings_tracker_server",
   "version": "1.0.0",
   "description": "Server side for savings tracker application.",
-  "main": "app.js",
+  "main": "src/server.js",
   "scripts": {
+    "start": "nodemon --watch ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -14,5 +15,15 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.7"
   }
 }
