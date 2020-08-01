@@ -1,7 +1,8 @@
 module.exports = {
   "extends": "airbnb",
   "env": {
-    "node": true
+    "node": true,
+    "mocha": true
   },
   "rules": {
     "no-console": "off",

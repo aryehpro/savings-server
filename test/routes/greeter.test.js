@@ -1,15 +1,15 @@
-const expect = require('chai').expect;
+const { expect } = require('chai');
 const { hello } = require('../../src/routes/greeter');
 
-let req = {
-  body : {}
+const req = {
+  body: {},
 };
 
-let res = {
+const res = {
   sendCalledWith: '',
-  send: function (arg) {
+  send(arg) {
     this.sendCalledWith = arg;
-  }
+  },
 };
 
 describe('Greeter route', () => {
@@ -17,6 +17,23 @@ describe('Greeter route', () => {
     it('Should respond with error if no name is given', () => {
       hello(req, res);
       expect(res.sendCalledWith).to.contain('error');
+    });
+
+    it('Should respond in English by default', () => {
+      const testReq = req;
+      testReq.body.name = 'Aryeh';
+
+      hello(testReq, res);
+      expect(res.sendCalledWith).to.equal('Hello, Aryeh!');
+    });
+
+    it('Should return an error for an unsupported language', () => {
+      const testReq = req;
+      testReq.body.name = 'Aryeh';
+      testReq.body.language = 'Jaberwakee';
+
+      hello(testReq, res);
+      expect(res.sendCalledWith).to.equal('Error: Unsupported language');
     });
   });
 });

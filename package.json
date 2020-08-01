@@ -2,6 +2,10 @@
   "name": "savings_tracker_server",
   "version": "1.0.0",
   "description": "Server side for savings tracker application.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aryehpro/savings-server.git"
+  },
   "main": "src/server.js",
   "scripts": {
     "start": "nodemon --watch ./src",
@@ -14,17 +18,17 @@
   "author": "aryehpro",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "eslint": "^5.9.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1",
-    "mocha": "^5.2.0",
-    "nodemon": "^1.19.1",
-    "dot-prop": ">=5.1.1"
+    "dot-prop": "^5.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.5",
+    "mocha": "^8.1.0",
+    "nodemon": "^2.0.4"
   }
 }

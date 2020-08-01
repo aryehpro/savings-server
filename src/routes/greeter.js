@@ -1,7 +1,7 @@
 module.exports = {
-  hello: function (req, res) {
-    if(!req.body.name){
-      res.send('this is an rror');
+  hello(req, res) {
+    if (!req.body.name) {
+      res.send('Error: name is a required parameter.');
     }
-  }
+  },
 };
